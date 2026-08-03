@@ -1373,7 +1373,7 @@ class OSSelectView(discord.ui.View):
                 f"--memory={ram_mb}m "
                 f"--cpus={self.cpu} "
                 f"--restart=always "
-                f"{os_version} /sbin/init"
+                f"{os_version} /bin/bash"
             )
             await execute_docker(container_name, docker_cmd, node_id=self.node_id)
             await apply_internal_permissions(container_name, self.node_id)
@@ -1549,7 +1549,7 @@ class ReinstallOSSelectView(discord.ui.View):
                 f"--memory={ram_mb}m "
                 f"--cpus={self.cpu} "
                 f"--restart=always "
-                f"{os_version} /sbin/init"
+                f"{os_version} /bin/bash"
             )
             await execute_docker(self.container_name, docker_cmd, node_id=self.node_id)
             await apply_internal_permissions(self.container_name, self.node_id)
