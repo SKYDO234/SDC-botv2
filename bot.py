@@ -718,7 +718,7 @@ async def get_or_create_vps_role(guild):
             except discord.Forbidden:
                 return None
             role = None
-        else:
+      else:
             VPS_USER_ROLE_ID = role.id
             return role
 
@@ -938,7 +938,7 @@ async def get_container_stats(container_name: str, node_id: Optional[int] = None
         data = {"container": container_name}
         params = {"api_key": node["api_key"]}
         try:
-                      response = requests.post(url, json=data, params=params, timeout=10)
+            response = requests.post(url, json=data, params=params, timeout=10)
             response.raise_for_status()
             return response.json()
         except requests.exceptions.ConnectionError:
@@ -1278,7 +1278,7 @@ async def my_vps(ctx):
     embed.set_footer(text=f"Made by SKYDO • VPS Control Panel")
     embed.timestamp = ctx.message.created_at
 
-  await ctx.send(embed=embed)
+    await ctx.send(embed=embed)
 
 @bot.command(name='docker-list')
 @is_admin()
@@ -1482,10 +1482,11 @@ class OSSelectView(discord.ui.View):
 ✅ **Container:** High performance Docker environment"""
             add_field(dm_embed, "⚙️ Features & Capabilities", features_info, False)
 
-support_info = f"""**Need Help?**
+            support_info = (
+f"""**Need Help?**
 • Use `{PREFIX}manage` to start/stop/reinstall your VPS
 • Click 🔐 in manage to regenerate password
-• Contact admin for issues or upgrades"""
+• Contact admin for issues or upgrades""" )
             add_field(dm_embed, "📞 Support & Management", support_info, False)
             
             try:
