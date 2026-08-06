@@ -141,7 +141,7 @@ The bot will require CONFIRM within 15 seconds before executing.
 
 Clone the repository:
 
-git clone https://github.com/SKYDO234/SDC-botv2.git
+## git clone https://github.com/SKYDO234/SDC-botv2.git
 
 Move into the project folder:
 
