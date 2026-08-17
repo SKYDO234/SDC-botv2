@@ -134,7 +134,7 @@ ADMIN_ID = YOUR_DISCORD_ID
 # ▶️ Start The Bot
 
 ```bash
-python3 bot.py
+python3 bot2.py
 ```
 
 ---
